@@ -23,3 +23,15 @@ C:\Users\David\Desktop\GroupProject\Common\bin\Debug\Common.pdb
 C:\Users\David\Desktop\GroupProject\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Users\David\Desktop\GroupProject\Common\obj\Debug\Common.dll
 C:\Users\David\Desktop\GroupProject\Common\obj\Debug\Common.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\bin\Debug\Common.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\bin\Debug\Common.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\obj\Debug\Common.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Common\obj\Debug\Common.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\bin\Debug\Common.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\bin\Debug\Common.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\obj\Debug\Common.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Common\obj\Debug\Common.pdb

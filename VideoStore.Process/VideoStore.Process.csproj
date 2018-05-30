@@ -69,6 +69,7 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -88,6 +89,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c2d987a4-ad05-4c0b-b285-5b64b0132df9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoStore.Business.Components.Interfaces\VideoStore.Business.Components.Interfaces.csproj">
       <Project>{2851CEF3-00F9-4AFB-9306-0D6E0BDD45E3}</Project>
       <Name>VideoStore.Business.Components.Interfaces</Name>
@@ -116,6 +121,9 @@
       <Project>{6a0aebb1-060f-4a88-b18e-448935063e1a}</Project>
       <Name>VideoStore.WebClient</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

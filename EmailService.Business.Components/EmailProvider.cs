@@ -11,7 +11,7 @@ namespace EmailService.Business.Components
     {
         public void SendEmail(EmailService.Business.Entities.EmailMessage pMessage)
         {
-            Console.WriteLine("Sending email to " + pMessage.ToAddresses + ": " + pMessage.Message);
+            Console.WriteLine("Sending email to " + pMessage.EmailAddress + ": " + pMessage.EmailContent);
         }
     }
 }

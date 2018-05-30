@@ -17,17 +17,104 @@ using System.Transactions;
 using System.ServiceModel.Description;
 using VideoStore.Business.Components.Interfaces;
 using VideoStore.WebClient.CustomAuth;
+using System.Data.Entity;
+using Common;
 
 namespace VideoStore.Process
 {
     public class Program
     {
+        private static global::Common.SubscriberServiceHost mHost;
+        private const String cAddress = "net.msmq://localhost/private/ToVideoStoreQueue";
+        private const String cMexAddress = "net.tcp://localhost:9021/ToVideoStoreQueueService/mex";
         static void Main(string[] args)
         {
+
+            HostSubscribeService();
             ResolveDependencies();
             InsertDummyEntities();
+            
+
+            var startTimeSpan = TimeSpan.Zero;
+            var periodTimeSpan = TimeSpan.FromMinutes(1);
+
+            var timer = new System.Threading.Timer((e) =>
+            {
+                checkOrderPaymentTimeout();
+                
+            }, null, startTimeSpan, periodTimeSpan);
+
             HostServices();
+
         }
+
+ 
+
+        public static void checkOrderPaymentTimeout()
+        { 
+            using (TransactionScope lScope = new TransactionScope())
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+                List<Order> orders = lContainer.Orders.Include("OrderItems.Media.Stocks").Include("Customer.LoginCredential").Where((tOrder) => tOrder.OrderStatus == "unpayed").ToList();
+                Console.WriteLine(String.Format("Check Order Payment Timeout, order list length: {0}", orders.Count));
+                foreach (Order lOrder in orders)
+                {
+                    DateTime orderTime = lOrder.OrderDate;
+                    DateTime now = DateTime.Now;
+                    TimeSpan timeSpan = now.Subtract(orderTime);
+                    double houres = timeSpan.TotalSeconds;
+                    if (houres > 110.0)
+                    {
+                        lOrder.OrderStatus = "expired";
+                        //LoadMediaStocks(lOrder);
+                        MarkAppropriateUnchangedAssociations(lOrder);
+                        lOrder.RevertStockLevels();
+                        lContainer.Orders.ApplyChanges(lOrder);
+                        
+                        lContainer.SaveChanges();
+                        lScope.Complete();
+                    }
+                }
+            }
+        }
+
+        private static void MarkAppropriateUnchangedAssociations(Order pOrder)
+        {
+            pOrder.Customer.MarkAsUnchanged();
+            pOrder.Customer.LoginCredential.MarkAsUnchanged();
+            foreach (OrderItem lOrder in pOrder.OrderItems)
+            {
+                lOrder.Media.Stocks.MarkAsUnchanged();
+                lOrder.Media.MarkAsUnchanged();
+            }
+        }
+
+        private static void LoadMediaStocks(Order pOrder)
+        {
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+
+                foreach (OrderItem lOrder in pOrder.OrderItems)
+                {
+                    //int orderItemID = lOrder.Id;
+                    //OrderItem lOrderItem =  lContainer.OrderItems.Include("Media").Where((pOrderItem) => pOrderItem.Id == orderItemID).FirstOrDefault();
+                    //int mediaID = lOrderItem.Media.Id;
+
+                    //Media lMedia = lContainer.Media.Include("Stocks").Where((pMedia) => pMedia.Id == mediaID).FirstOrDefault();
+                    //lOrder.Media = lMedia;
+                    lOrder.Media.Stocks = lContainer.Stocks.Where((pStock) => pStock.Media.Id == lOrder.Media.Id).FirstOrDefault();
+                }
+            }
+        }
+
+
+        private static void HostSubscribeService()
+        {
+            //System.Diagnostics.Debug.WriteLine("Email Host Subscribe Service");
+            mHost = new SubscriberServiceHost(typeof(SubscriberService), cAddress, cMexAddress, true, ".\\private$\\ToVideoStoreQueue");
+            Console.WriteLine("Video Store Queue Hosted");
+        }
+
 
         private static void InsertDummyEntities()
         {

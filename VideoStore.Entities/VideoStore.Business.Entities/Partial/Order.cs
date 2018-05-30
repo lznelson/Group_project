@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common;
 
 namespace VideoStore.Business.Entities
 {
-    public partial class Order
+    public partial class Order : IVisitable
     {
         public void UpdateStockLevels()
         {
@@ -20,6 +21,21 @@ namespace VideoStore.Business.Entities
                     throw new Exception("Cannot place an order - no more stock for media item");
                 }
             }
+        }
+
+        public void RevertStockLevels()
+        {
+            foreach (OrderItem lItem in this.OrderItems)
+            {
+
+                lItem.Media.Stocks.Quantity += lItem.Quantity;
+               
+            }
+        }
+
+        public void Accept(IVisitor pVisitor)
+        {
+            pVisitor.Visit(this);
         }
     }
 }

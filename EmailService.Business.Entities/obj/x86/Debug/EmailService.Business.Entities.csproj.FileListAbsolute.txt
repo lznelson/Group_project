@@ -9,3 +9,15 @@ C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities\obj\x86\Debug
 C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.csproj.CoreCompileInputs.cache
 C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.dll
 C:\Users\David\Desktop\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\bin\Debug\EmailService.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\bin\Debug\EmailService.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\EmailService.Business.Entities\obj\x86\Debug\EmailService.Business.Entities.pdb

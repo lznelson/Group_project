@@ -76,6 +76,7 @@
     <NavigationProperty Name="Customer" Relationship="VideoStoreEntityModel.CustomerOrder" FromRole="Order" ToRole="Customer" />
     <Property Type="Guid" Name="OrderNumber" Nullable="false" />
     <NavigationProperty Name="Delivery" Relationship="VideoStoreEntityModel.DeliveryOrder" FromRole="Order" ToRole="Delivery" />
+    <Property Name="OrderStatus" Type="String" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>

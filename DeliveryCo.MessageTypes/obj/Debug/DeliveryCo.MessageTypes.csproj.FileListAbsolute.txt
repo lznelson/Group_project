@@ -3,3 +3,14 @@ C:\Users\David\Desktop\GroupProject\DeliveryCo.MessageTypes\bin\Debug\DeliveryCo
 C:\Users\David\Desktop\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.csproj.CoreCompileInputs.cache
 C:\Users\David\Desktop\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.dll
 C:\Users\David\Desktop\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\DeliveryCo.MessageTypes\bin\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\DeliveryCo.MessageTypes\bin\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\bin\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\bin\Debug\DeliveryCo.MessageTypes.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\DeliveryCo.MessageTypes\obj\Debug\DeliveryCo.MessageTypes.pdb

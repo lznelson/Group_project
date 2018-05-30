@@ -8,20 +8,31 @@ using Microsoft.Practices.Unity.Configuration;
 using Microsoft.Practices.Unity.ServiceLocatorAdapter;
 using Microsoft.Practices.ServiceLocation;
 using System.Configuration;
+using Common;
+using EmailService.Services;
 
 namespace EmailService.Process
 {
     class Program
     {
+        private static global::Common.SubscriberServiceHost mHost;
+        private const String cAddress = "net.msmq://localhost/private/ToEmailQueue";
+        private const String cMexAddress = "net.tcp://localhost:9020/ToEmailQueueService/mex";
+
         static void Main(string[] args)
         {
+            //SubscribeForEvents();
             ResolveDependencies();
-            using (ServiceHost lHost = new ServiceHost(typeof(EmailService.Services.EmailService)))
-            {
-                lHost.Open();
-                Console.WriteLine("Email Service Started");
-                while (Console.ReadKey().Key != ConsoleKey.Q) ;
-            }
+            HostSubscribeService();
+
+        }
+
+        private static void HostSubscribeService()
+        {
+            //System.Diagnostics.Debug.WriteLine("Email Host Subscribe Service");
+            mHost = new SubscriberServiceHost(typeof(SubscriberService), cAddress, cMexAddress, true, ".\\private$\\ToEmailQueue");
+            Console.WriteLine("Email Services started. Press Q to quit.");
+            while (Console.ReadKey().Key != ConsoleKey.Q) ;
         }
 
         private static void ResolveDependencies()
@@ -34,5 +45,7 @@ namespace EmailService.Process
             UnityServiceLocator locator = new UnityServiceLocator(lContainer);
             ServiceLocator.SetLocatorProvider(() => locator);
         }
+
+
     }
 }

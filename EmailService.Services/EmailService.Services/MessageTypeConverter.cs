@@ -34,12 +34,12 @@ namespace EmailService.Services
         {
 
             AutoMapper.Mapper.CreateMap<global::EmailService.Business.Entities.EmailMessage,
-                global::EmailService.MessageTypes.EmailMessage>();
+                global::Common.Model.EmailMessage>();
         }
 
         public void InitializeExternalToInternalMappings()
         {
-            AutoMapper.Mapper.CreateMap<global::EmailService.MessageTypes.EmailMessage,
+            AutoMapper.Mapper.CreateMap<global::Common.Model.EmailMessage,
                 global::EmailService.Business.Entities.EmailMessage>();
         }
 

@@ -41,6 +41,7 @@ namespace VideoStore.WebClient.ClientModels
             lOrder.OrderDate = DateTime.Now;
             lOrder.Customer = pUserCache.Model;
             lOrder.Status = 0;
+            
             foreach (OrderItem lItem in mOrderItems)
             {
                 lOrder.OrderItems.Add(lItem);

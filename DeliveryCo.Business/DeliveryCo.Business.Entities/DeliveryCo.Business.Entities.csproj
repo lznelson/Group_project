@@ -55,6 +55,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DeliveryDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Partial\DeliveryInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +69,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DeliveryDataModel.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj">
+      <Project>{c2d987a4-ad05-4c0b-b285-5b64b0132df9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

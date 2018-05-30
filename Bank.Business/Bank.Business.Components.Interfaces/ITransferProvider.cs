@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common.Model;
 
 namespace Bank.Business.Components.Interfaces
 {
     public interface ITransferProvider
     {
-        void Transfer(double pAmount, int pFromAcctNumber, int pToAcctNumber);
+        void Transfer(Message pMessage);
     }
 }

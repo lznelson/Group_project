@@ -10,3 +10,15 @@ C:\Users\David\Desktop\GroupProject\Bank.Business\Bank.Business.Entities\bin\Deb
 C:\Users\David\Desktop\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.csproj.CoreCompileInputs.cache
 C:\Users\David\Desktop\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.dll
 C:\Users\David\Desktop\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll.config
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll.config
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.pdb
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.dll
+C:\Users\Charles\Desktop\COMP5348_Group_Submit\GroupProject\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.pdb

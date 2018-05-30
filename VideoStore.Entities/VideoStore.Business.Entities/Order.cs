@@ -118,6 +118,21 @@ namespace VideoStore.Business.Entities
             }
         }
         private System.Guid _orderNumber;
+    
+        [DataMember]
+        public string OrderStatus
+        {
+            get { return _orderStatus; }
+            set
+            {
+                if (_orderStatus != value)
+                {
+                    _orderStatus = value;
+                    OnPropertyChanged("OrderStatus");
+                }
+            }
+        }
+        private string _orderStatus;
 
         #endregion
 

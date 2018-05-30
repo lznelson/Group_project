@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Common.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Common.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" nillable="true" type="tns:Message" />
+  <xs:complexType name="TransferMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Message">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BTransfer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FromAccountNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="OrderGuid" type="ser:guid" />
+          <xs:element minOccurs="0" name="ToAccountNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="Total" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TransferMessage" nillable="true" type="tns:TransferMessage" />
+</xs:schema>

@@ -51,6 +51,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c2d987a4-ad05-4c0b-b285-5b64b0132df9}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoStore.Entities\VideoStore.Business.Entities\VideoStore.Business.Entities.csproj">
       <Project>{35992EC3-2C32-46AF-AEE4-491C54F681A5}</Project>
       <Name>VideoStore.Business.Entities</Name>

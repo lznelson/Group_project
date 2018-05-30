@@ -39,13 +39,13 @@ namespace VideoStore.Business.Components
             }
         }
 
-        public IDeliveryService DeliveryService
-        {
-            get
-            {
-                return GetTcpService<IDeliveryService>("net.tcp://localhost:9030/DeliveryService");
-            }
-        }
+        //public IDeliveryService DeliveryService
+        //{
+        //    get
+        //    {
+        //        return GetTcpService<IDeliveryService>("net.tcp://localhost:9030/DeliveryService");
+        //    }
+        //}
 
 
 

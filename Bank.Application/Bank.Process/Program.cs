@@ -11,27 +11,43 @@ using Microsoft.Practices.Unity.Configuration;
 using Microsoft.Practices.Unity.ServiceLocatorAdapter;
 using Microsoft.Practices.ServiceLocation;
 using System.Configuration;
+using Common;
+using Bank.Business.Components;
 
 namespace Bank.Process
 {
     class Program
     {
+
+        private static global::Common.SubscriberServiceHost mHost;
+        private const String cAddress = "net.msmq://localhost/private/ToBankQueue";
+        private const String cMexAddress = "net.tcp://localhost:9018/ToBankQueueService/mex";
+
         static void Main(string[] args)
         {
             ResolveDependencies();
             CreateDummyEntities();
-            HostServices();
+            HostSubscribeService();
+            //HostServices();
 
         }
 
-        private static void HostServices()
+        //private static void HostServices()
+        //{
+        //    using (ServiceHost lHost = new ServiceHost(typeof(TransferService)))
+        //    {
+        //        lHost.Open();
+        //        Console.WriteLine("Bank Services started. Press Q to quit.");
+        //        while (Console.ReadKey().Key != ConsoleKey.Q) ;
+        //    }
+        //}
+
+        private static void HostSubscribeService()
         {
-            using (ServiceHost lHost = new ServiceHost(typeof(TransferService)))
-            {
-                lHost.Open();
-                Console.WriteLine("Bank Services started. Press Q to quit.");
-                while (Console.ReadKey().Key != ConsoleKey.Q) ;
-            }
+            System.Diagnostics.Debug.WriteLine("Bank Host Subscribe Service");
+            mHost = new SubscriberServiceHost(typeof(SubscriberService), cAddress, cMexAddress, true, ".\\private$\\ToBankQueue");
+            Console.WriteLine("Bank Services started. Press Q to quit.");
+            while (Console.ReadKey().Key != ConsoleKey.Q) ;
         }
 
         private static void CreateDummyEntities()
@@ -70,5 +86,7 @@ namespace Bank.Process
             UnityServiceLocator locator = new UnityServiceLocator(lContainer);
             ServiceLocator.SetLocatorProvider(() => locator);
         }
+
+
     }
 }
